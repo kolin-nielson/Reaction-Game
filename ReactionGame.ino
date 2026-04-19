@@ -333,246 +333,251 @@ struct RhythmNote {
   uint16_t freq_hz;
 };
 
-// Song 1: Seven Nation Army (Easy) - iconic riff
+// Song 1: Seven Nation Army (Easy) - iconic bass riff E E G E D C B
 const RhythmNote PROGMEM song0_notes[] = {
-  // Main riff repeats - E E G E D C B
-  {0, 2, NOTE_E4}, {400, 2, NOTE_E4}, {800, 3, NOTE_G4}, {1200, 2, NOTE_E4},
-  {1600, 1, NOTE_D4}, {2200, 0, NOTE_C4}, {2800, 1, NOTE_B3},
-  // Repeat
-  {4000, 2, NOTE_E4}, {4400, 2, NOTE_E4}, {4800, 3, NOTE_G4}, {5200, 2, NOTE_E4},
-  {5600, 1, NOTE_D4}, {6200, 0, NOTE_C4}, {6800, 1, NOTE_B3},
-  // Repeat higher octave feel
-  {8000, 3, NOTE_E5}, {8400, 3, NOTE_E5}, {8800, 4, NOTE_G5}, {9200, 3, NOTE_E5},
-  {9600, 2, NOTE_D5}, {10200, 1, NOTE_C5}, {10800, 2, NOTE_B4},
-  // Back to main
-  {12000, 2, NOTE_E4}, {12400, 2, NOTE_E4}, {12800, 3, NOTE_G4}, {13200, 2, NOTE_E4},
-  {13600, 1, NOTE_D4}, {14200, 0, NOTE_C4}, {14800, 1, NOTE_B3},
-  // Bridge section
-  {16000, 0, NOTE_G3}, {16500, 1, NOTE_A3}, {17000, 2, NOTE_B3}, {17500, 3, NOTE_C4},
-  {18000, 4, NOTE_D4}, {18500, 3, NOTE_C4}, {19000, 2, NOTE_B3}, {19500, 1, NOTE_A3},
-  // Final riffs
-  {20500, 2, NOTE_E4}, {20900, 2, NOTE_E4}, {21300, 3, NOTE_G4}, {21700, 2, NOTE_E4},
-  {22100, 1, NOTE_D4}, {22700, 0, NOTE_C4}, {23300, 1, NOTE_B3},
-  {24500, 2, NOTE_E4}, {24900, 2, NOTE_E4}, {25300, 3, NOTE_G4}, {25700, 2, NOTE_E4},
-  {26100, 1, NOTE_D4}, {26700, 0, NOTE_C4}, {27300, 1, NOTE_B3},
+  // Riff 1: E E G E D C B  (BPM ~120)
+  {0, 2, NOTE_E4}, {500, 2, NOTE_E4}, {750, 3, NOTE_G4}, {1000, 2, NOTE_E4},
+  {1500, 1, NOTE_D4}, {2000, 0, NOTE_C4}, {3000, 1, NOTE_B3},
+  // Riff 2
+  {4000, 2, NOTE_E4}, {4500, 2, NOTE_E4}, {4750, 3, NOTE_G4}, {5000, 2, NOTE_E4},
+  {5500, 1, NOTE_D4}, {6000, 0, NOTE_C4}, {7000, 1, NOTE_B3},
+  // Riff 3
+  {8000, 2, NOTE_E4}, {8500, 2, NOTE_E4}, {8750, 3, NOTE_G4}, {9000, 2, NOTE_E4},
+  {9500, 1, NOTE_D4}, {10000, 0, NOTE_C4}, {11000, 1, NOTE_B3},
+  // Riff 4
+  {12000, 2, NOTE_E4}, {12500, 2, NOTE_E4}, {12750, 3, NOTE_G4}, {13000, 2, NOTE_E4},
+  {13500, 1, NOTE_D4}, {14000, 0, NOTE_C4}, {15000, 1, NOTE_B3},
+  // Riff 5
+  {16000, 2, NOTE_E4}, {16500, 2, NOTE_E4}, {16750, 3, NOTE_G4}, {17000, 2, NOTE_E4},
+  {17500, 1, NOTE_D4}, {18000, 0, NOTE_C4}, {19000, 1, NOTE_B3},
+  // Riff 6
+  {20000, 2, NOTE_E4}, {20500, 2, NOTE_E4}, {20750, 3, NOTE_G4}, {21000, 2, NOTE_E4},
+  {21500, 1, NOTE_D4}, {22000, 0, NOTE_C4}, {23000, 1, NOTE_B3},
 };
-#define SONG0_LEN 46
+#define SONG0_LEN 42
 
-// Song 2: Sweet Child O Mine (Medium) - opening riff
+// Song 2: Sweet Child O Mine (Medium) - opening riff D D A G B G A G
 const RhythmNote PROGMEM song1_notes[] = {
-  // D D A# G A# A G A pattern
-  {0, 1, NOTE_D5}, {200, 1, NOTE_D5}, {400, 4, NOTE_A5}, {600, 3, NOTE_G5},
-  {800, 4, NOTE_A5}, {1000, 2, NOTE_FS5}, {1200, 3, NOTE_G5}, {1400, 2, NOTE_FS5},
-  // Repeat slightly shifted
-  {1800, 1, NOTE_E5}, {2000, 1, NOTE_E5}, {2200, 4, NOTE_A5}, {2400, 3, NOTE_G5},
-  {2600, 4, NOTE_A5}, {2800, 2, NOTE_FS5}, {3000, 3, NOTE_G5}, {3200, 2, NOTE_FS5},
-  // Third round
-  {3600, 1, NOTE_G5}, {3800, 1, NOTE_G5}, {4000, 4, NOTE_B5}, {4200, 3, NOTE_A5},
-  {4400, 4, NOTE_B5}, {4600, 2, NOTE_A5}, {4800, 3, NOTE_G5}, {5000, 2, NOTE_FS5},
-  // Back to D
-  {5400, 1, NOTE_D5}, {5600, 1, NOTE_D5}, {5800, 4, NOTE_A5}, {6000, 3, NOTE_G5},
-  {6200, 4, NOTE_A5}, {6400, 2, NOTE_FS5}, {6600, 3, NOTE_G5}, {6800, 2, NOTE_FS5},
-  // Chorus feel
-  {7500, 0, NOTE_D4}, {7800, 1, NOTE_E4}, {8100, 2, NOTE_G4}, {8400, 3, NOTE_A4},
-  {8700, 4, NOTE_B4}, {9000, 4, NOTE_D5}, {9300, 3, NOTE_A4}, {9600, 2, NOTE_G4},
-  // Second verse riff
-  {10200, 1, NOTE_D5}, {10400, 1, NOTE_D5}, {10600, 4, NOTE_A5}, {10800, 3, NOTE_G5},
-  {11000, 4, NOTE_A5}, {11200, 2, NOTE_FS5}, {11400, 3, NOTE_G5}, {11600, 2, NOTE_FS5},
-  {12000, 1, NOTE_E5}, {12200, 1, NOTE_E5}, {12400, 4, NOTE_A5}, {12600, 3, NOTE_G5},
-  {12800, 4, NOTE_A5}, {13000, 2, NOTE_FS5}, {13200, 3, NOTE_G5}, {13400, 2, NOTE_FS5},
-  // Ending
-  {14000, 0, NOTE_D4}, {14300, 1, NOTE_G4}, {14600, 2, NOTE_A4}, {14900, 3, NOTE_D5},
-  {15200, 4, NOTE_G5}, {15600, 3, NOTE_FS5}, {16000, 2, NOTE_E5}, {16400, 1, NOTE_D5},
+  // Pattern: D5 D4 A4 G4 B4 G4 A4 G4 (circular picking, 200ms apart)
+  // Lanes: D4=0, G4=1, A4=2, B4=3, D5=4
+  {0, 4, NOTE_D5}, {200, 0, NOTE_D4}, {400, 2, NOTE_A4}, {600, 1, NOTE_G4},
+  {800, 3, NOTE_B4}, {1000, 1, NOTE_G4}, {1200, 2, NOTE_A4}, {1400, 1, NOTE_G4},
+  // Repeat
+  {1800, 4, NOTE_D5}, {2000, 0, NOTE_D4}, {2200, 2, NOTE_A4}, {2400, 1, NOTE_G4},
+  {2600, 3, NOTE_B4}, {2800, 1, NOTE_G4}, {3000, 2, NOTE_A4}, {3200, 1, NOTE_G4},
+  // Repeat
+  {3600, 4, NOTE_D5}, {3800, 0, NOTE_D4}, {4000, 2, NOTE_A4}, {4200, 1, NOTE_G4},
+  {4400, 3, NOTE_B4}, {4600, 1, NOTE_G4}, {4800, 2, NOTE_A4}, {5000, 1, NOTE_G4},
+  // Repeat
+  {5400, 4, NOTE_D5}, {5600, 0, NOTE_D4}, {5800, 2, NOTE_A4}, {6000, 1, NOTE_G4},
+  {6200, 3, NOTE_B4}, {6400, 1, NOTE_G4}, {6600, 2, NOTE_A4}, {6800, 1, NOTE_G4},
+  // E pattern variation: E5 E4 A4 G4 B4 G4 A4 G4
+  {7200, 4, NOTE_E5}, {7400, 0, NOTE_E4}, {7600, 2, NOTE_A4}, {7800, 1, NOTE_G4},
+  {8000, 3, NOTE_B4}, {8200, 1, NOTE_G4}, {8400, 2, NOTE_A4}, {8600, 1, NOTE_G4},
+  // G pattern: G5 G4 B4 A4 D5 A4 B4 A4
+  {9000, 4, NOTE_G5}, {9200, 1, NOTE_G4}, {9400, 3, NOTE_B4}, {9600, 2, NOTE_A4},
+  {9800, 4, NOTE_D5}, {10000, 2, NOTE_A4}, {10200, 3, NOTE_B4}, {10400, 2, NOTE_A4},
+  // Back to D pattern
+  {10800, 4, NOTE_D5}, {11000, 0, NOTE_D4}, {11200, 2, NOTE_A4}, {11400, 1, NOTE_G4},
+  {11600, 3, NOTE_B4}, {11800, 1, NOTE_G4}, {12000, 2, NOTE_A4}, {12200, 1, NOTE_G4},
+  // Final repeat
+  {12600, 4, NOTE_D5}, {13000, 0, NOTE_D4}, {13400, 2, NOTE_A4}, {13800, 1, NOTE_G4},
+  {14200, 3, NOTE_B4}, {14600, 1, NOTE_G4}, {15000, 4, NOTE_D5},
 };
-#define SONG1_LEN 60
+#define SONG1_LEN 59
 
-// Song 3: Enter Sandman (Medium) - main riff
+// Song 3: Enter Sandman (Medium) - E-E-G-Bb-G-E riff
 const RhythmNote PROGMEM song2_notes[] = {
-  // E5 open, chromatic riff
-  {0, 2, NOTE_E4}, {300, 2, NOTE_E4}, {500, 2, NOTE_E4},
-  {800, 3, NOTE_G4}, {1000, 4, NOTE_AS4}, {1200, 3, NOTE_G4},
-  {1400, 2, NOTE_E4}, {1600, 2, NOTE_E4}, {1800, 2, NOTE_E4},
-  {2100, 1, NOTE_D4}, {2300, 1, NOTE_CS4}, {2500, 2, NOTE_E4},
-  // Repeat pattern
-  {3200, 2, NOTE_E4}, {3500, 2, NOTE_E4}, {3700, 2, NOTE_E4},
-  {4000, 3, NOTE_G4}, {4200, 4, NOTE_AS4}, {4400, 3, NOTE_G4},
-  {4600, 2, NOTE_E4}, {4800, 2, NOTE_E4}, {5000, 2, NOTE_E4},
-  {5300, 1, NOTE_D4}, {5500, 1, NOTE_CS4}, {5700, 2, NOTE_E4},
-  // Bridge/verse riff
-  {6400, 0, NOTE_B3}, {6700, 1, NOTE_D4}, {7000, 2, NOTE_E4}, {7300, 3, NOTE_G4},
-  {7600, 2, NOTE_E4}, {7900, 1, NOTE_D4}, {8200, 0, NOTE_B3}, {8600, 0, NOTE_B3},
-  // Heavy part
-  {9200, 4, NOTE_E5}, {9400, 3, NOTE_D5}, {9600, 2, NOTE_B4}, {9800, 3, NOTE_D5},
-  {10000, 4, NOTE_E5}, {10300, 4, NOTE_E5}, {10600, 3, NOTE_D5}, {10900, 2, NOTE_B4},
-  // End section
-  {11500, 2, NOTE_E4}, {11700, 2, NOTE_E4}, {11900, 3, NOTE_G4},
-  {12200, 4, NOTE_AS4}, {12400, 3, NOTE_G4}, {12700, 2, NOTE_E4},
-  {13000, 1, NOTE_D4}, {13300, 0, NOTE_B3}, {13600, 2, NOTE_E4},
-  {14000, 2, NOTE_E4}, {14300, 3, NOTE_G4}, {14600, 2, NOTE_E4},
-  {15000, 1, NOTE_D4}, {15400, 2, NOTE_E4},
-};
-#define SONG2_LEN 52
-
-// Song 4: Crazy Train (Med-Hard) - iconic opening riff
-const RhythmNote PROGMEM song3_notes[] = {
-  // FS FS FS A FS E FS pattern
-  {0, 2, NOTE_FS4}, {150, 2, NOTE_FS4}, {300, 2, NOTE_FS4},
-  {450, 3, NOTE_A4}, {600, 2, NOTE_FS4}, {750, 1, NOTE_E4},
-  {900, 2, NOTE_FS4}, {1100, 2, NOTE_FS4}, {1300, 2, NOTE_FS4},
-  {1450, 3, NOTE_A4}, {1600, 2, NOTE_FS4}, {1750, 4, NOTE_B4},
-  {1900, 3, NOTE_A4}, {2100, 2, NOTE_FS4}, {2300, 1, NOTE_E4},
-  // Second round faster
-  {2700, 2, NOTE_FS4}, {2850, 2, NOTE_FS4}, {3000, 2, NOTE_FS4},
-  {3150, 3, NOTE_A4}, {3300, 2, NOTE_FS4}, {3450, 1, NOTE_E4},
-  {3600, 2, NOTE_FS4}, {3800, 2, NOTE_FS4}, {4000, 2, NOTE_FS4},
-  {4150, 3, NOTE_A4}, {4300, 2, NOTE_FS4}, {4450, 4, NOTE_B4},
-  {4600, 3, NOTE_A4}, {4800, 2, NOTE_FS4}, {5000, 1, NOTE_E4},
-  // Verse riff
-  {5500, 0, NOTE_D4}, {5700, 1, NOTE_E4}, {5900, 2, NOTE_FS4},
-  {6100, 3, NOTE_A4}, {6300, 4, NOTE_B4}, {6500, 3, NOTE_A4},
-  {6700, 2, NOTE_FS4}, {6900, 1, NOTE_E4},
+  // Lanes: B3/CS4=0, D4=1, E4=2, G4=3, AS4/E5=4
+  // Main riff: E-E-G-Bb-G-E, D-C#-E
+  {0, 2, NOTE_E4}, {300, 2, NOTE_E4}, {600, 2, NOTE_E4},
+  {900, 3, NOTE_G4}, {1100, 4, NOTE_AS4}, {1300, 3, NOTE_G4},
+  {1500, 2, NOTE_E4}, {1800, 2, NOTE_E4},
+  {2100, 1, NOTE_D4}, {2300, 0, NOTE_CS4}, {2600, 2, NOTE_E4},
+  // Repeat
+  {3200, 2, NOTE_E4}, {3500, 2, NOTE_E4}, {3800, 2, NOTE_E4},
+  {4100, 3, NOTE_G4}, {4300, 4, NOTE_AS4}, {4500, 3, NOTE_G4},
+  {4700, 2, NOTE_E4}, {5000, 2, NOTE_E4},
+  {5300, 1, NOTE_D4}, {5500, 0, NOTE_CS4}, {5800, 2, NOTE_E4},
   // Bridge
-  {7300, 4, NOTE_D5}, {7500, 3, NOTE_CS5}, {7700, 2, NOTE_A4},
-  {7900, 1, NOTE_E4}, {8100, 2, NOTE_FS4}, {8300, 3, NOTE_A4},
-  {8500, 4, NOTE_CS5}, {8700, 4, NOTE_D5},
-  // Repeat main riff
-  {9200, 2, NOTE_FS4}, {9350, 2, NOTE_FS4}, {9500, 2, NOTE_FS4},
-  {9650, 3, NOTE_A4}, {9800, 2, NOTE_FS4}, {9950, 1, NOTE_E4},
-  {10100, 2, NOTE_FS4}, {10300, 2, NOTE_FS4}, {10500, 2, NOTE_FS4},
-  {10650, 3, NOTE_A4}, {10800, 2, NOTE_FS4}, {10950, 4, NOTE_B4},
-  {11100, 3, NOTE_A4}, {11300, 2, NOTE_FS4}, {11500, 1, NOTE_E4},
+  {6400, 0, NOTE_B3}, {6700, 1, NOTE_D4}, {7000, 2, NOTE_E4}, {7300, 3, NOTE_G4},
+  {7600, 2, NOTE_E4}, {7900, 1, NOTE_D4}, {8200, 0, NOTE_B3},
+  // Heavy part
+  {8800, 4, NOTE_E5}, {9100, 3, NOTE_G4}, {9400, 4, NOTE_AS4}, {9700, 3, NOTE_G4},
+  {10000, 2, NOTE_E4}, {10300, 1, NOTE_D4}, {10600, 0, NOTE_CS4}, {10900, 2, NOTE_E4},
+  // Final riff
+  {11500, 2, NOTE_E4}, {11800, 2, NOTE_E4},
+  {12100, 3, NOTE_G4}, {12300, 4, NOTE_AS4}, {12500, 3, NOTE_G4},
+  {12800, 2, NOTE_E4}, {13100, 1, NOTE_D4}, {13400, 0, NOTE_CS4},
+  {13700, 2, NOTE_E4}, {14200, 2, NOTE_E4},
+};
+#define SONG2_LEN 45
+
+// Song 4: Crazy Train (Med-Hard) - F#-A-F#-B-F#-A-F#-E alternating
+const RhythmNote PROGMEM song3_notes[] = {
+  // Lanes: D4=0, E4=1, FS4=2, A4=3, B4=4
+  // Pattern: F#-A-F#-B-F#-A-F#-E at ~150ms
+  {0, 2, NOTE_FS4}, {150, 3, NOTE_A4}, {300, 2, NOTE_FS4}, {450, 4, NOTE_B4},
+  {600, 2, NOTE_FS4}, {750, 3, NOTE_A4}, {900, 2, NOTE_FS4}, {1050, 1, NOTE_E4},
+  // Repeat
+  {1350, 2, NOTE_FS4}, {1500, 3, NOTE_A4}, {1650, 2, NOTE_FS4}, {1800, 4, NOTE_B4},
+  {1950, 2, NOTE_FS4}, {2100, 3, NOTE_A4}, {2250, 2, NOTE_FS4}, {2400, 1, NOTE_E4},
+  // Repeat
+  {2700, 2, NOTE_FS4}, {2850, 3, NOTE_A4}, {3000, 2, NOTE_FS4}, {3150, 4, NOTE_B4},
+  {3300, 2, NOTE_FS4}, {3450, 3, NOTE_A4}, {3600, 2, NOTE_FS4}, {3750, 1, NOTE_E4},
+  // Verse riff - ascending
+  {4200, 0, NOTE_D4}, {4400, 1, NOTE_E4}, {4600, 2, NOTE_FS4}, {4800, 3, NOTE_A4},
+  {5000, 4, NOTE_B4}, {5200, 3, NOTE_A4}, {5400, 2, NOTE_FS4}, {5600, 1, NOTE_E4},
+  // Bridge
+  {6000, 4, NOTE_D5}, {6200, 4, NOTE_CS5}, {6400, 3, NOTE_A4},
+  {6600, 1, NOTE_E4}, {6800, 2, NOTE_FS4}, {7000, 3, NOTE_A4},
+  {7200, 4, NOTE_CS5}, {7400, 4, NOTE_D5},
+  // Back to main riff
+  {7800, 2, NOTE_FS4}, {7950, 3, NOTE_A4}, {8100, 2, NOTE_FS4}, {8250, 4, NOTE_B4},
+  {8400, 2, NOTE_FS4}, {8550, 3, NOTE_A4}, {8700, 2, NOTE_FS4}, {8850, 1, NOTE_E4},
+  // Repeat
+  {9150, 2, NOTE_FS4}, {9300, 3, NOTE_A4}, {9450, 2, NOTE_FS4}, {9600, 4, NOTE_B4},
+  {9750, 2, NOTE_FS4}, {9900, 3, NOTE_A4}, {10050, 2, NOTE_FS4}, {10200, 1, NOTE_E4},
   // Final run
-  {12000, 0, NOTE_D4}, {12150, 1, NOTE_E4}, {12300, 2, NOTE_FS4},
-  {12450, 3, NOTE_A4}, {12600, 4, NOTE_B4}, {12800, 4, NOTE_D5},
-  {13000, 3, NOTE_CS5}, {13200, 2, NOTE_A4}, {13400, 1, NOTE_FS4},
-  {13600, 0, NOTE_E4}, {13800, 1, NOTE_FS4}, {14000, 2, NOTE_A4},
+  {10600, 0, NOTE_D4}, {10750, 1, NOTE_E4}, {10900, 2, NOTE_FS4},
+  {11050, 3, NOTE_A4}, {11200, 4, NOTE_B4}, {11400, 4, NOTE_D5},
+  {11600, 4, NOTE_CS5}, {11800, 3, NOTE_A4}, {12000, 2, NOTE_FS4},
+  {12200, 1, NOTE_E4}, {12400, 2, NOTE_FS4}, {12600, 3, NOTE_A4},
 };
-#define SONG3_LEN 72
+#define SONG3_LEN 64
 
-// Song 5: Thunderstruck (Hard) - fast alternate picking
+// Song 5: Thunderstruck (Hard) - B alternating rapidly with lower notes
 const RhythmNote PROGMEM song4_notes[] = {
-  // Fast B string hammer-on pattern
-  {0, 4, NOTE_B4}, {150, 3, NOTE_A4}, {300, 4, NOTE_B4}, {450, 2, NOTE_FS4},
-  {600, 4, NOTE_B4}, {750, 1, NOTE_E4}, {900, 4, NOTE_B4}, {1050, 2, NOTE_FS4},
-  {1200, 4, NOTE_B4}, {1350, 3, NOTE_A4}, {1500, 4, NOTE_B4}, {1650, 3, NOTE_A4},
-  {1800, 4, NOTE_B4}, {1950, 2, NOTE_FS4}, {2100, 4, NOTE_B4}, {2250, 1, NOTE_E4},
-  // Second phrase
-  {2500, 4, NOTE_B4}, {2650, 3, NOTE_A4}, {2800, 4, NOTE_B4}, {2950, 2, NOTE_FS4},
-  {3100, 4, NOTE_B4}, {3250, 1, NOTE_E4}, {3400, 4, NOTE_B4}, {3550, 0, NOTE_D4},
-  {3700, 4, NOTE_B4}, {3850, 1, NOTE_E4}, {4000, 4, NOTE_B4}, {4150, 2, NOTE_FS4},
-  {4300, 4, NOTE_B4}, {4450, 3, NOTE_A4}, {4600, 4, NOTE_B4}, {4750, 2, NOTE_FS4},
-  // Power chord section
-  {5200, 0, NOTE_E4}, {5400, 0, NOTE_E4}, {5600, 2, NOTE_A4}, {5800, 2, NOTE_A4},
-  {6000, 4, NOTE_B4}, {6200, 4, NOTE_B4}, {6400, 2, NOTE_A4}, {6600, 0, NOTE_E4},
+  // Lanes: D4=0, E4=1, FS4=2, A4=3, B4=4
+  // B-A-B-E-B-A-B-E pattern at ~150ms
+  {0, 4, NOTE_B4}, {150, 3, NOTE_A4}, {300, 4, NOTE_B4}, {450, 1, NOTE_E4},
+  {600, 4, NOTE_B4}, {750, 3, NOTE_A4}, {900, 4, NOTE_B4}, {1050, 1, NOTE_E4},
+  // B-A-B-FS-B-A-B-FS
+  {1200, 4, NOTE_B4}, {1350, 3, NOTE_A4}, {1500, 4, NOTE_B4}, {1650, 2, NOTE_FS4},
+  {1800, 4, NOTE_B4}, {1950, 3, NOTE_A4}, {2100, 4, NOTE_B4}, {2250, 2, NOTE_FS4},
+  // B-A-B-E-B-A-B-D
+  {2400, 4, NOTE_B4}, {2550, 3, NOTE_A4}, {2700, 4, NOTE_B4}, {2850, 1, NOTE_E4},
+  {3000, 4, NOTE_B4}, {3150, 3, NOTE_A4}, {3300, 4, NOTE_B4}, {3450, 0, NOTE_D4},
+  // B-E-B-FS-B-A-B-FS
+  {3600, 4, NOTE_B4}, {3750, 1, NOTE_E4}, {3900, 4, NOTE_B4}, {4050, 2, NOTE_FS4},
+  {4200, 4, NOTE_B4}, {4350, 3, NOTE_A4}, {4500, 4, NOTE_B4}, {4650, 2, NOTE_FS4},
+  // Power chord break
+  {5000, 1, NOTE_E4}, {5200, 1, NOTE_E4}, {5400, 3, NOTE_A4}, {5600, 3, NOTE_A4},
+  {5800, 4, NOTE_B4}, {6000, 4, NOTE_B4}, {6200, 3, NOTE_A4}, {6400, 1, NOTE_E4},
   // Resume fast picking
-  {7000, 4, NOTE_B4}, {7130, 3, NOTE_A4}, {7260, 4, NOTE_B4}, {7390, 2, NOTE_FS4},
-  {7520, 4, NOTE_B4}, {7650, 1, NOTE_E4}, {7780, 4, NOTE_B4}, {7910, 2, NOTE_FS4},
-  {8040, 4, NOTE_B4}, {8170, 3, NOTE_A4}, {8300, 4, NOTE_B4}, {8430, 3, NOTE_A4},
-  {8560, 4, NOTE_B4}, {8690, 2, NOTE_FS4}, {8820, 4, NOTE_B4}, {8950, 1, NOTE_E4},
-  // Climax
-  {9300, 0, NOTE_E4}, {9450, 1, NOTE_FS4}, {9600, 2, NOTE_A4}, {9750, 3, NOTE_B4},
-  {9900, 4, NOTE_D5}, {10050, 4, NOTE_E5}, {10200, 3, NOTE_D5}, {10350, 2, NOTE_B4},
-  {10500, 1, NOTE_A4}, {10650, 0, NOTE_E4}, {10800, 1, NOTE_FS4}, {10950, 2, NOTE_A4},
-  {11100, 3, NOTE_B4}, {11250, 4, NOTE_D5}, {11400, 4, NOTE_E5}, {11600, 3, NOTE_B4},
-  // End
-  {12000, 4, NOTE_B4}, {12150, 3, NOTE_A4}, {12300, 4, NOTE_B4}, {12450, 2, NOTE_FS4},
-  {12600, 4, NOTE_B4}, {12750, 1, NOTE_E4}, {12900, 4, NOTE_B4}, {13100, 0, NOTE_D4},
-  {13300, 2, NOTE_E4}, {13500, 4, NOTE_B4},
+  {6800, 4, NOTE_B4}, {6950, 3, NOTE_A4}, {7100, 4, NOTE_B4}, {7250, 1, NOTE_E4},
+  {7400, 4, NOTE_B4}, {7550, 3, NOTE_A4}, {7700, 4, NOTE_B4}, {7850, 1, NOTE_E4},
+  {8000, 4, NOTE_B4}, {8150, 3, NOTE_A4}, {8300, 4, NOTE_B4}, {8450, 2, NOTE_FS4},
+  {8600, 4, NOTE_B4}, {8750, 3, NOTE_A4}, {8900, 4, NOTE_B4}, {9050, 0, NOTE_D4},
+  // Climax ascending
+  {9400, 1, NOTE_E4}, {9550, 2, NOTE_FS4}, {9700, 3, NOTE_A4}, {9850, 4, NOTE_B4},
+  {10000, 4, NOTE_D5}, {10150, 4, NOTE_E5}, {10300, 4, NOTE_D5}, {10450, 3, NOTE_B4},
+  {10600, 3, NOTE_A4}, {10750, 1, NOTE_E4},
+  // End: back to pattern
+  {11100, 4, NOTE_B4}, {11250, 3, NOTE_A4}, {11400, 4, NOTE_B4}, {11550, 1, NOTE_E4},
+  {11700, 4, NOTE_B4}, {11850, 3, NOTE_A4}, {12000, 4, NOTE_B4}, {12150, 0, NOTE_D4},
+  {12300, 1, NOTE_E4}, {12500, 4, NOTE_B4},
 };
-#define SONG4_LEN 78
+#define SONG4_LEN 74
 
-// Song 6: Through the Fire and Flames (Extreme) - speed metal
+// Song 6: Through the Fire and Flames (Extreme) - fast runs 80-100ms
 const RhythmNote PROGMEM song5_notes[] = {
-  // Ultra fast intro hammer-ons
-  {0, 2, NOTE_E5}, {100, 3, NOTE_F5}, {200, 4, NOTE_G5}, {300, 3, NOTE_F5},
-  {400, 2, NOTE_E5}, {500, 1, NOTE_D5}, {600, 0, NOTE_C5}, {700, 1, NOTE_D5},
-  {800, 2, NOTE_E5}, {900, 3, NOTE_F5}, {1000, 4, NOTE_G5}, {1100, 4, NOTE_A5},
-  {1200, 3, NOTE_G5}, {1300, 2, NOTE_F5}, {1400, 1, NOTE_E5}, {1500, 0, NOTE_D5},
-  // Second fast run
-  {1700, 0, NOTE_C5}, {1800, 1, NOTE_D5}, {1900, 2, NOTE_E5}, {2000, 3, NOTE_G5},
-  {2100, 4, NOTE_A5}, {2200, 3, NOTE_G5}, {2300, 2, NOTE_E5}, {2400, 1, NOTE_D5},
-  {2500, 0, NOTE_C5}, {2600, 1, NOTE_E5}, {2700, 2, NOTE_G5}, {2800, 4, NOTE_B5},
-  {2900, 3, NOTE_A5}, {3000, 2, NOTE_G5}, {3100, 1, NOTE_E5}, {3200, 0, NOTE_C5},
-  // Power section
-  {3500, 2, NOTE_E4}, {3600, 2, NOTE_E4}, {3700, 3, NOTE_G4}, {3800, 4, NOTE_A4},
-  {3900, 4, NOTE_B4}, {4000, 3, NOTE_A4}, {4100, 2, NOTE_G4}, {4200, 1, NOTE_E4},
-  {4400, 0, NOTE_D4}, {4500, 1, NOTE_E4}, {4600, 2, NOTE_G4}, {4700, 3, NOTE_A4},
-  {4800, 4, NOTE_B4}, {4900, 4, NOTE_D5}, {5000, 3, NOTE_B4}, {5100, 2, NOTE_A4},
-  // Solo section - crazy fast
-  {5400, 4, NOTE_E5}, {5500, 3, NOTE_D5}, {5600, 2, NOTE_C5}, {5700, 1, NOTE_B4},
-  {5800, 0, NOTE_A4}, {5900, 1, NOTE_B4}, {6000, 2, NOTE_C5}, {6100, 3, NOTE_D5},
-  {6200, 4, NOTE_E5}, {6280, 4, NOTE_F5}, {6360, 3, NOTE_E5}, {6440, 2, NOTE_D5},
-  {6520, 1, NOTE_C5}, {6600, 0, NOTE_B4}, {6700, 1, NOTE_C5}, {6800, 2, NOTE_D5},
-  {6900, 3, NOTE_E5}, {7000, 4, NOTE_G5}, {7100, 3, NOTE_F5}, {7200, 2, NOTE_E5},
+  // Lanes: C5=0, D5=1, E5=2, F5/G5=3, A5/B5=4
+  // Fast ascending run
+  {0, 0, NOTE_C5}, {90, 1, NOTE_D5}, {180, 2, NOTE_E5}, {270, 3, NOTE_F5},
+  {360, 3, NOTE_G5}, {450, 4, NOTE_A5}, {540, 4, NOTE_B5}, {630, 4, NOTE_A5},
+  // Fast descending
+  {720, 3, NOTE_G5}, {810, 3, NOTE_F5}, {900, 2, NOTE_E5}, {990, 1, NOTE_D5},
+  {1080, 0, NOTE_C5}, {1170, 1, NOTE_D5}, {1260, 2, NOTE_E5}, {1350, 3, NOTE_G5},
+  // Second run ascending
+  {1500, 1, NOTE_D5}, {1590, 2, NOTE_E5}, {1680, 3, NOTE_F5}, {1770, 3, NOTE_G5},
+  {1860, 4, NOTE_A5}, {1950, 4, NOTE_B5}, {2040, 4, NOTE_A5}, {2130, 3, NOTE_G5},
+  // Descending
+  {2220, 2, NOTE_E5}, {2310, 1, NOTE_D5}, {2400, 0, NOTE_C5}, {2490, 1, NOTE_D5},
+  {2580, 2, NOTE_E5}, {2670, 3, NOTE_G5}, {2760, 4, NOTE_B5}, {2850, 4, NOTE_A5},
+  // Power section (slower)
+  {3100, 2, NOTE_E4}, {3200, 2, NOTE_E4}, {3300, 3, NOTE_G4}, {3400, 4, NOTE_A4},
+  {3500, 4, NOTE_B4}, {3600, 3, NOTE_A4}, {3700, 2, NOTE_G4}, {3800, 1, NOTE_E4},
+  {3900, 0, NOTE_D4}, {4000, 1, NOTE_E4}, {4100, 2, NOTE_G4}, {4200, 3, NOTE_A4},
+  {4300, 4, NOTE_B4}, {4400, 4, NOTE_D5}, {4500, 3, NOTE_B4}, {4600, 2, NOTE_A4},
+  // Solo - crazy fast
+  {4900, 4, NOTE_E5}, {4980, 3, NOTE_D5}, {5060, 0, NOTE_C5}, {5140, 3, NOTE_B4},
+  {5220, 2, NOTE_A4}, {5300, 3, NOTE_B4}, {5380, 0, NOTE_C5}, {5460, 3, NOTE_D5},
+  {5540, 4, NOTE_E5}, {5620, 3, NOTE_F5}, {5700, 4, NOTE_E5}, {5780, 3, NOTE_D5},
+  {5860, 0, NOTE_C5}, {5940, 2, NOTE_B4}, {6020, 0, NOTE_C5}, {6100, 3, NOTE_D5},
   // Sweeping arpeggios
-  {7500, 0, NOTE_C4}, {7580, 1, NOTE_E4}, {7660, 2, NOTE_G4}, {7740, 3, NOTE_C5},
-  {7820, 4, NOTE_E5}, {7900, 3, NOTE_C5}, {7980, 2, NOTE_G4}, {8060, 1, NOTE_E4},
-  {8200, 0, NOTE_D4}, {8280, 1, NOTE_FS4}, {8360, 2, NOTE_A4}, {8440, 3, NOTE_D5},
-  {8520, 4, NOTE_FS5}, {8600, 3, NOTE_D5}, {8680, 2, NOTE_A4}, {8760, 1, NOTE_FS4},
+  {6300, 0, NOTE_C4}, {6380, 1, NOTE_E4}, {6460, 2, NOTE_G4}, {6540, 0, NOTE_C5},
+  {6620, 4, NOTE_E5}, {6700, 0, NOTE_C5}, {6780, 2, NOTE_G4}, {6860, 1, NOTE_E4},
+  {6960, 1, NOTE_D4}, {7040, 2, NOTE_FS4}, {7120, 3, NOTE_A4}, {7200, 1, NOTE_D5},
+  {7280, 4, NOTE_FS5}, {7360, 1, NOTE_D5}, {7440, 3, NOTE_A4}, {7520, 2, NOTE_FS4},
   // Final blitz
-  {9000, 2, NOTE_E5}, {9080, 3, NOTE_F5}, {9160, 4, NOTE_G5}, {9240, 4, NOTE_A5},
-  {9320, 3, NOTE_G5}, {9400, 2, NOTE_E5}, {9480, 1, NOTE_D5}, {9560, 0, NOTE_C5},
-  {9700, 2, NOTE_E5}, {9800, 4, NOTE_G5}, {9900, 2, NOTE_E5}, {10000, 0, NOTE_C5},
+  {7700, 2, NOTE_E5}, {7780, 3, NOTE_F5}, {7860, 3, NOTE_G5}, {7940, 4, NOTE_A5},
+  {8020, 3, NOTE_G5}, {8100, 2, NOTE_E5}, {8180, 1, NOTE_D5}, {8260, 0, NOTE_C5},
+  {8400, 2, NOTE_E5}, {8500, 3, NOTE_G5}, {8600, 2, NOTE_E5}, {8700, 0, NOTE_C5},
 };
-#define SONG5_LEN 88
+#define SONG5_LEN 84
 
-// Song 7: Free Bird (Hard) - solo section
+// Song 7: Free Bird (Hard) - slow intro then fast solo
 const RhythmNote PROGMEM song6_notes[] = {
-  // Opening gentle part
+  // Lanes: D5=0, E5=1, G5=2, A5=3, B5/D6=4
+  // Opening gentle: G-A-B-A-G melody (slow, 500ms)
   {0, 2, NOTE_G4}, {500, 3, NOTE_A4}, {1000, 4, NOTE_B4}, {1500, 3, NOTE_A4},
   {2000, 2, NOTE_G4}, {2500, 1, NOTE_E4}, {3000, 2, NOTE_G4}, {3500, 3, NOTE_A4},
-  // Solo begins - picking up speed
-  {4000, 2, NOTE_G5}, {4200, 3, NOTE_A5}, {4400, 4, NOTE_B5}, {4600, 3, NOTE_A5},
-  {4800, 2, NOTE_G5}, {5000, 1, NOTE_E5}, {5200, 2, NOTE_G5}, {5400, 4, NOTE_B5},
-  // Fast pentatonic runs
-  {5800, 0, NOTE_D5}, {5950, 1, NOTE_E5}, {6100, 2, NOTE_G5}, {6250, 3, NOTE_A5},
-  {6400, 4, NOTE_B5}, {6550, 3, NOTE_A5}, {6700, 2, NOTE_G5}, {6850, 1, NOTE_E5},
-  {7000, 0, NOTE_D5}, {7150, 1, NOTE_E5}, {7300, 2, NOTE_G5}, {7500, 4, NOTE_B5},
-  // Double-time section
-  {7800, 4, NOTE_B5}, {7950, 3, NOTE_A5}, {8100, 2, NOTE_G5}, {8250, 1, NOTE_E5},
-  {8400, 0, NOTE_D5}, {8550, 1, NOTE_E5}, {8700, 2, NOTE_G5}, {8850, 3, NOTE_A5},
-  {9000, 4, NOTE_B5}, {9130, 4, NOTE_D6}, {9260, 3, NOTE_B5}, {9390, 2, NOTE_A5},
-  {9520, 1, NOTE_G5}, {9650, 0, NOTE_E5}, {9800, 1, NOTE_G5}, {9950, 2, NOTE_A5},
+  // Solo begins - picking up speed (300ms)
+  {4200, 2, NOTE_G5}, {4500, 3, NOTE_A5}, {4800, 4, NOTE_B5}, {5100, 3, NOTE_A5},
+  {5400, 2, NOTE_G5}, {5700, 1, NOTE_E5}, {6000, 2, NOTE_G5}, {6300, 4, NOTE_B5},
+  // Fast pentatonic runs (150ms)
+  {6700, 0, NOTE_D5}, {6850, 1, NOTE_E5}, {7000, 2, NOTE_G5}, {7150, 3, NOTE_A5},
+  {7300, 4, NOTE_B5}, {7450, 3, NOTE_A5}, {7600, 2, NOTE_G5}, {7750, 1, NOTE_E5},
+  {7900, 0, NOTE_D5}, {8050, 1, NOTE_E5}, {8200, 2, NOTE_G5}, {8350, 4, NOTE_B5},
+  // Double-time (130ms)
+  {8600, 4, NOTE_B5}, {8730, 3, NOTE_A5}, {8860, 2, NOTE_G5}, {8990, 1, NOTE_E5},
+  {9120, 0, NOTE_D5}, {9250, 1, NOTE_E5}, {9380, 2, NOTE_G5}, {9510, 3, NOTE_A5},
+  {9640, 4, NOTE_B5}, {9770, 4, NOTE_D6}, {9900, 4, NOTE_B5}, {10030, 3, NOTE_A5},
+  {10160, 2, NOTE_G5}, {10290, 1, NOTE_E5}, {10420, 2, NOTE_G5}, {10550, 3, NOTE_A5},
   // Climax runs
-  {10200, 0, NOTE_E5}, {10320, 1, NOTE_G5}, {10440, 2, NOTE_A5}, {10560, 3, NOTE_B5},
-  {10680, 4, NOTE_D6}, {10800, 3, NOTE_B5}, {10920, 2, NOTE_A5}, {11040, 1, NOTE_G5},
-  {11200, 0, NOTE_E5}, {11350, 1, NOTE_G5}, {11500, 2, NOTE_A5}, {11650, 3, NOTE_B5},
-  {11800, 4, NOTE_D6}, {11950, 4, NOTE_E6}, {12100, 3, NOTE_D6}, {12250, 2, NOTE_B5},
-  // Ending phrase
-  {12500, 4, NOTE_G5}, {12700, 3, NOTE_E5}, {12900, 2, NOTE_D5}, {13100, 1, NOTE_B4},
-  {13300, 0, NOTE_G4}, {13600, 1, NOTE_A4}, {13900, 2, NOTE_B4}, {14200, 3, NOTE_D5},
-  {14500, 4, NOTE_G5}, {14800, 2, NOTE_E5}, {15100, 0, NOTE_D5}, {15500, 2, NOTE_G4},
+  {10800, 1, NOTE_E5}, {10930, 2, NOTE_G5}, {11060, 3, NOTE_A5}, {11190, 4, NOTE_B5},
+  {11320, 4, NOTE_D6}, {11450, 4, NOTE_B5}, {11580, 3, NOTE_A5}, {11710, 2, NOTE_G5},
+  {11840, 1, NOTE_E5}, {11970, 2, NOTE_G5}, {12100, 3, NOTE_A5}, {12230, 4, NOTE_B5},
+  {12360, 4, NOTE_D6}, {12490, 4, NOTE_E6}, {12620, 4, NOTE_D6}, {12750, 4, NOTE_B5},
+  // Ending - slowing down
+  {13000, 2, NOTE_G5}, {13200, 1, NOTE_E5}, {13400, 0, NOTE_D5},
+  {13700, 2, NOTE_G4}, {14000, 3, NOTE_A4}, {14300, 4, NOTE_B4},
+  {14700, 2, NOTE_G4},
 };
-#define SONG6_LEN 68
+#define SONG6_LEN 63
 
-// Song 8: Pirates of the Caribbean - He's a Pirate (Medium-Hard)
+// Song 8: Pirates of the Caribbean - He's a Pirate (Med-Hard)
 const RhythmNote PROGMEM song7_notes[] = {
-  // Iconic opening: da da DA da da DA da da
-  {0, 1, NOTE_E4}, {150, 2, NOTE_G4}, {300, 3, NOTE_A4}, {500, 3, NOTE_A4},
-  {700, 3, NOTE_A4}, {850, 4, NOTE_B4}, {1000, 3, NOTE_A4}, {1150, 2, NOTE_G4},
-  {1300, 1, NOTE_E4}, {1500, 1, NOTE_E4}, {1700, 0, NOTE_D4}, {1900, 1, NOTE_E4},
+  // Lanes: D4=0, E4/F4=1, G4/A4=2, B4/C5=3, D5/E5/F5/G5=4
+  // Iconic melody: A-C-D-D-D-E-F-F-F-F-G-E-E-D-C-D (BPM ~160, ~190ms per 8th)
+  {0, 2, NOTE_A4}, {190, 3, NOTE_C5}, {380, 4, NOTE_D5}, {500, 4, NOTE_D5},
+  {620, 4, NOTE_D5}, {810, 4, NOTE_E5}, {1000, 4, NOTE_F5}, {1120, 4, NOTE_F5},
+  {1240, 4, NOTE_F5}, {1360, 4, NOTE_F5}, {1550, 4, NOTE_G5}, {1740, 4, NOTE_E5},
+  {1930, 4, NOTE_E5}, {2120, 4, NOTE_D5}, {2310, 3, NOTE_C5}, {2500, 4, NOTE_D5},
   // Second phrase
-  {2200, 1, NOTE_E4}, {2350, 2, NOTE_G4}, {2500, 3, NOTE_A4}, {2700, 3, NOTE_A4},
-  {2900, 3, NOTE_A4}, {3050, 4, NOTE_B4}, {3200, 4, NOTE_C5}, {3400, 4, NOTE_B4},
-  {3600, 3, NOTE_A4}, {3800, 2, NOTE_G4}, {4000, 3, NOTE_A4}, {4200, 1, NOTE_E4},
-  // Rising section
-  {4600, 0, NOTE_D4}, {4750, 1, NOTE_E4}, {4900, 2, NOTE_G4}, {5100, 2, NOTE_G4},
-  {5300, 2, NOTE_G4}, {5450, 3, NOTE_A4}, {5600, 2, NOTE_G4}, {5750, 1, NOTE_E4},
-  {5900, 0, NOTE_D4}, {6100, 0, NOTE_D4}, {6300, 1, NOTE_E4}, {6500, 0, NOTE_D4},
-  // Repeat main theme faster
-  {6800, 1, NOTE_E4}, {6950, 2, NOTE_G4}, {7100, 3, NOTE_A4}, {7250, 3, NOTE_A4},
-  {7400, 4, NOTE_B4}, {7550, 3, NOTE_A4}, {7700, 2, NOTE_G4}, {7850, 1, NOTE_E4},
-  {8000, 2, NOTE_G4}, {8150, 3, NOTE_A4}, {8300, 4, NOTE_B4}, {8450, 4, NOTE_C5},
+  {2880, 2, NOTE_A4}, {3070, 3, NOTE_C5}, {3260, 4, NOTE_D5}, {3380, 4, NOTE_D5},
+  {3500, 4, NOTE_D5}, {3690, 4, NOTE_E5}, {3880, 4, NOTE_F5}, {4000, 4, NOTE_F5},
+  {4120, 4, NOTE_F5}, {4240, 4, NOTE_F5}, {4430, 4, NOTE_G5}, {4620, 4, NOTE_E5},
+  {4810, 4, NOTE_E5}, {5000, 4, NOTE_D5}, {5190, 3, NOTE_C5}, {5380, 4, NOTE_D5},
+  // Rising section: D-E-F-G-A
+  {5760, 0, NOTE_D4}, {5950, 1, NOTE_E4}, {6140, 1, NOTE_F4}, {6330, 2, NOTE_G4},
+  {6520, 2, NOTE_A4}, {6710, 2, NOTE_A4}, {6900, 2, NOTE_G4}, {7090, 1, NOTE_F4},
+  {7280, 1, NOTE_E4}, {7470, 0, NOTE_D4}, {7660, 1, NOTE_E4}, {7850, 0, NOTE_D4},
+  // Repeat main theme
+  {8230, 2, NOTE_A4}, {8420, 3, NOTE_C5}, {8610, 4, NOTE_D5}, {8730, 4, NOTE_D5},
+  {8850, 4, NOTE_E5}, {9040, 4, NOTE_F5}, {9230, 4, NOTE_G5}, {9420, 4, NOTE_E5},
+  {9610, 4, NOTE_D5}, {9800, 3, NOTE_C5}, {9990, 4, NOTE_D5},
   // Dramatic ascending run
-  {8700, 0, NOTE_D4}, {8850, 1, NOTE_E4}, {9000, 2, NOTE_G4}, {9150, 3, NOTE_A4},
-  {9300, 4, NOTE_B4}, {9500, 4, NOTE_C5}, {9700, 4, NOTE_D5}, {9900, 3, NOTE_C5},
-  {10100, 2, NOTE_A4}, {10300, 1, NOTE_G4}, {10500, 2, NOTE_A4}, {10700, 1, NOTE_E4},
+  {10380, 0, NOTE_D4}, {10570, 1, NOTE_E4}, {10760, 2, NOTE_G4}, {10950, 2, NOTE_A4},
+  {11140, 3, NOTE_B4}, {11330, 3, NOTE_C5}, {11520, 4, NOTE_D5},
+  {11710, 3, NOTE_C5}, {11900, 2, NOTE_A4}, {12090, 2, NOTE_G4}, {12280, 2, NOTE_A4},
   // Final phrase
-  {11000, 3, NOTE_A4}, {11150, 3, NOTE_A4}, {11300, 4, NOTE_B4}, {11500, 3, NOTE_A4},
-  {11700, 2, NOTE_G4}, {11900, 1, NOTE_E4}, {12100, 0, NOTE_D4}, {12400, 1, NOTE_E4},
-  {12700, 3, NOTE_A4},
+  {12660, 2, NOTE_A4}, {12850, 3, NOTE_C5}, {13040, 4, NOTE_D5},
+  {13230, 3, NOTE_C5}, {13420, 2, NOTE_A4}, {13610, 2, NOTE_G4},
+  {13800, 0, NOTE_D4}, {14000, 2, NOTE_A4},
 };
-#define SONG7_LEN 65
+#define SONG7_LEN 70
 
 // Song 9: Jaws Theme (Easy) - 2-note terror
 const RhythmNote PROGMEM song8_notes[] = {
@@ -608,26 +613,27 @@ const RhythmNote PROGMEM song8_notes[] = {
 
 // Song 10: Never Gonna Give You Up - Rick Astley (Medium)
 const RhythmNote PROGMEM song9_notes[] = {
-  // Intro riff - iconic synth hook
+  // Lanes: D4=0, E4=1, G4=2, A4=3, B4=4
+  // Synth riff: D-E-G-E-B-B-A (rest) D-E-G-E-A-A-G-E
   {0, 0, NOTE_D4}, {200, 1, NOTE_E4}, {400, 2, NOTE_G4}, {600, 1, NOTE_E4},
   {800, 4, NOTE_B4}, {1000, 4, NOTE_B4}, {1400, 3, NOTE_A4},
-  // Repeat hook
+  // Second part of riff
   {1800, 0, NOTE_D4}, {2000, 1, NOTE_E4}, {2200, 2, NOTE_G4}, {2400, 1, NOTE_E4},
   {2600, 3, NOTE_A4}, {2800, 3, NOTE_A4}, {3200, 2, NOTE_G4}, {3400, 1, NOTE_E4},
-  // "Never gonna give you up"
+  // Chorus: "Never gonna give you up" G-A-G-E-D-D-E-G
   {3800, 2, NOTE_G4}, {4000, 3, NOTE_A4}, {4200, 2, NOTE_G4}, {4400, 1, NOTE_E4},
   {4600, 0, NOTE_D4}, {4900, 0, NOTE_D4}, {5200, 1, NOTE_E4}, {5400, 2, NOTE_G4},
-  // "Never gonna let you down"
+  // "Never gonna let you down" G-A-B-A-G-E-D
   {5800, 2, NOTE_G4}, {6000, 3, NOTE_A4}, {6200, 4, NOTE_B4}, {6400, 3, NOTE_A4},
   {6600, 2, NOTE_G4}, {6900, 1, NOTE_E4}, {7200, 0, NOTE_D4},
-  // "Never gonna run around and desert you"
+  // "Never gonna run around" D-E-G-E-A-G-E-D-E-G-A
   {7600, 0, NOTE_D4}, {7800, 1, NOTE_E4}, {8000, 2, NOTE_G4}, {8200, 1, NOTE_E4},
   {8400, 3, NOTE_A4}, {8600, 2, NOTE_G4}, {8800, 1, NOTE_E4}, {9000, 0, NOTE_D4},
   {9200, 1, NOTE_E4}, {9400, 2, NOTE_G4}, {9600, 3, NOTE_A4},
-  // Chorus repeat
+  // Riff repeat
   {10000, 0, NOTE_D4}, {10200, 1, NOTE_E4}, {10400, 2, NOTE_G4}, {10600, 1, NOTE_E4},
   {10800, 4, NOTE_B4}, {11000, 4, NOTE_B4}, {11400, 3, NOTE_A4},
-  // Second verse melody
+  // Chorus repeat
   {11800, 2, NOTE_G4}, {12000, 3, NOTE_A4}, {12200, 2, NOTE_G4}, {12400, 1, NOTE_E4},
   {12600, 0, NOTE_D4}, {12900, 0, NOTE_D4}, {13200, 1, NOTE_E4}, {13400, 2, NOTE_G4},
   {13600, 2, NOTE_G4}, {13800, 3, NOTE_A4}, {14000, 4, NOTE_B4}, {14200, 3, NOTE_A4},
@@ -637,63 +643,67 @@ const RhythmNote PROGMEM song9_notes[] = {
 
 // Song 11: Imperial March - Darth Vader (Medium)
 const RhythmNote PROGMEM song10_notes[] = {
-  // DUN DUN DUN DUN-DA-DUN DUN-DA-DUN
+  // Lanes: DS4=0, FS4=1, G4=2, AS4=3, D5/DS5=4
+  // DUN DUN DUN dun-da-DUN dun-da-DUN
   {0, 2, NOTE_G4}, {500, 2, NOTE_G4}, {1000, 2, NOTE_G4},
-  {1500, 0, NOTE_DS4}, {1750, 4, NOTE_AS4},
-  {2000, 2, NOTE_G4}, {2500, 0, NOTE_DS4}, {2750, 4, NOTE_AS4},
+  {1500, 0, NOTE_DS4}, {1750, 3, NOTE_AS4},
+  {2000, 2, NOTE_G4}, {2500, 0, NOTE_DS4}, {2750, 3, NOTE_AS4},
   {3000, 2, NOTE_G4},
-  // Second phrase - higher
-  {4000, 3, NOTE_D5}, {4500, 3, NOTE_D5}, {5000, 3, NOTE_D5},
-  {5500, 4, NOTE_DS5}, {5750, 4, NOTE_AS4},
-  {6000, 1, NOTE_FS4}, {6500, 0, NOTE_DS4}, {6750, 4, NOTE_AS4},
+  // Second phrase higher: D5-D5-D5-Eb5-Bb4-F#4-Eb4-Bb4-G4
+  {4000, 4, NOTE_D5}, {4500, 4, NOTE_D5}, {5000, 4, NOTE_D5},
+  {5500, 4, NOTE_DS5}, {5750, 3, NOTE_AS4},
+  {6000, 1, NOTE_FS4}, {6500, 0, NOTE_DS4}, {6750, 3, NOTE_AS4},
   {7000, 2, NOTE_G4},
   // Repeat main theme
   {8000, 2, NOTE_G4}, {8500, 2, NOTE_G4}, {9000, 2, NOTE_G4},
-  {9500, 0, NOTE_DS4}, {9750, 4, NOTE_AS4},
-  {10000, 2, NOTE_G4}, {10500, 0, NOTE_DS4}, {10750, 4, NOTE_AS4},
+  {9500, 0, NOTE_DS4}, {9750, 3, NOTE_AS4},
+  {10000, 2, NOTE_G4}, {10500, 0, NOTE_DS4}, {10750, 3, NOTE_AS4},
   {11000, 2, NOTE_G4},
-  // Marching section
-  {12000, 2, NOTE_G4}, {12250, 2, NOTE_G4},
-  {12500, 3, NOTE_A4}, {12750, 2, NOTE_G4}, {13000, 2, NOTE_G4},
-  {13250, 3, NOTE_AS4}, {13500, 3, NOTE_A4},
-  {14000, 2, NOTE_G4}, {14250, 2, NOTE_G4},
-  {14500, 3, NOTE_A4}, {14750, 2, NOTE_G4},
-  {15000, 0, NOTE_D4}, {15500, 0, NOTE_D4},
+  // Second phrase repeat
+  {12000, 4, NOTE_D5}, {12500, 4, NOTE_D5}, {13000, 4, NOTE_D5},
+  {13500, 4, NOTE_DS5}, {13750, 3, NOTE_AS4},
+  {14000, 1, NOTE_FS4}, {14500, 0, NOTE_DS4}, {14750, 3, NOTE_AS4},
+  {15000, 2, NOTE_G4},
   // Final DUN DUN DUN
   {16000, 2, NOTE_G4}, {16500, 2, NOTE_G4}, {17000, 2, NOTE_G4},
-  {17500, 0, NOTE_DS4}, {17750, 4, NOTE_AS4},
+  {17500, 0, NOTE_DS4}, {17750, 3, NOTE_AS4},
   {18000, 2, NOTE_G4},
 };
-#define SONG10_LEN 45
+#define SONG10_LEN 42
 
-// Song 12: Pink Panther Theme (Medium)
+// Song 12: Pink Panther Theme (Medium) - chromatic sneak
 const RhythmNote PROGMEM song11_notes[] = {
-  // The sneaky chromatic walk
-  {0, 1, NOTE_DS4}, {350, 2, NOTE_E4}, {1000, 2, NOTE_G4},
-  {1350, 3, NOTE_GS4}, {2000, 1, NOTE_DS4}, {2350, 2, NOTE_E4},
-  {2700, 2, NOTE_G4}, {3050, 3, NOTE_GS4},
-  // Ascending phrase
-  {3500, 3, NOTE_A4}, {3700, 4, NOTE_AS4}, {3900, 3, NOTE_A4},
-  {4100, 2, NOTE_GS4}, {4300, 2, NOTE_G4}, {4700, 1, NOTE_E4},
+  // Lanes: D4=0, DS4/E4=1, G4/GS4=2, A4/AS4=3, C5/D5/DS5=4
+  // Iconic motif: (rest) Eb-E-(pause)-G-Ab-(pause)-Eb-E-G-Ab-A-Bb-A-Ab-G-E
+  // With swing/dotted feel
+  {500, 1, NOTE_DS4}, {850, 1, NOTE_E4},
+  {1500, 2, NOTE_G4}, {1850, 2, NOTE_GS4},
+  {2500, 1, NOTE_DS4}, {2850, 1, NOTE_E4},
+  {3200, 2, NOTE_G4}, {3550, 2, NOTE_GS4},
+  // Ascending chromatic phrase
+  {4000, 3, NOTE_A4}, {4200, 3, NOTE_AS4}, {4400, 3, NOTE_A4},
+  {4600, 2, NOTE_GS4}, {4800, 2, NOTE_G4}, {5200, 1, NOTE_E4},
   // Repeat main motif
-  {5200, 1, NOTE_DS4}, {5550, 2, NOTE_E4}, {6200, 2, NOTE_G4},
-  {6550, 3, NOTE_GS4}, {7200, 1, NOTE_DS4}, {7550, 2, NOTE_E4},
-  {7900, 2, NOTE_G4}, {8250, 3, NOTE_GS4},
+  {5800, 1, NOTE_DS4}, {6150, 1, NOTE_E4},
+  {6800, 2, NOTE_G4}, {7150, 2, NOTE_GS4},
+  {7800, 1, NOTE_DS4}, {8150, 1, NOTE_E4},
+  {8500, 2, NOTE_G4}, {8850, 2, NOTE_GS4},
   // High section
-  {8700, 3, NOTE_C5}, {8900, 4, NOTE_D5}, {9100, 4, NOTE_DS5},
-  {9400, 3, NOTE_C5}, {9700, 2, NOTE_G4}, {10000, 1, NOTE_E4},
+  {9300, 4, NOTE_C5}, {9500, 4, NOTE_D5}, {9700, 4, NOTE_DS5},
+  {10000, 4, NOTE_C5}, {10300, 2, NOTE_G4}, {10600, 1, NOTE_E4},
   // Sneaky walk down
-  {10500, 3, NOTE_A4}, {10700, 2, NOTE_GS4}, {10900, 2, NOTE_G4},
-  {11200, 1, NOTE_E4}, {11500, 1, NOTE_DS4}, {11800, 0, NOTE_D4},
+  {11100, 3, NOTE_A4}, {11300, 2, NOTE_GS4}, {11500, 2, NOTE_G4},
+  {11800, 1, NOTE_E4}, {12100, 1, NOTE_DS4}, {12400, 0, NOTE_D4},
   // Return to main theme
-  {12300, 1, NOTE_DS4}, {12650, 2, NOTE_E4}, {13300, 2, NOTE_G4},
-  {13650, 3, NOTE_GS4}, {14000, 3, NOTE_A4}, {14200, 4, NOTE_AS4},
-  {14400, 3, NOTE_A4}, {14600, 2, NOTE_GS4},
+  {12900, 1, NOTE_DS4}, {13250, 1, NOTE_E4},
+  {13900, 2, NOTE_G4}, {14250, 2, NOTE_GS4},
+  {14600, 3, NOTE_A4}, {14800, 3, NOTE_AS4}, {15000, 3, NOTE_A4},
+  {15200, 2, NOTE_GS4},
   // Ending
-  {15000, 2, NOTE_G4}, {15300, 1, NOTE_E4}, {15700, 1, NOTE_DS4},
-  {16200, 2, NOTE_E4},
+  {15600, 2, NOTE_G4}, {15900, 1, NOTE_E4}, {16300, 1, NOTE_DS4},
+  {16800, 1, NOTE_E4},
 };
-#define SONG11_LEN 46
+#define SONG11_LEN 44
 
 // Song metadata
 const uint8_t NUM_SONGS = 12;
@@ -751,7 +761,7 @@ const char* const songDiffs[] PROGMEM = {
 
 /* ======================= RHYTHM GAME STATE ======================= */
 
-const unsigned long RHYTHM_DEBOUNCE = 120;
+const unsigned long RHYTHM_DEBOUNCE = 80;
 unsigned long rhythmLastPress[5] = {0};
 
 // Current song state
@@ -778,7 +788,7 @@ unsigned long rhythmLastFrame = 0;
 const unsigned long RHYTHM_FRAME_MS = 33; // ~30fps
 const int HIGHWAY_COLS = 32;
 const uint8_t laneRows[5] = {1, 3, 4, 5, 7}; // row mapping for 5 lanes
-const unsigned long HIGHWAY_WINDOW_MS = 3000; // notes visible 3s ahead
+const unsigned long HIGHWAY_WINDOW_MS = 4000; // notes visible 4s ahead
 
 // Hit feedback
 unsigned long rhythmHitFlash[5] = {0};
@@ -1322,14 +1332,14 @@ void rhythmUpdateLEDs(unsigned long elapsed) {
       if (n.lane != lane) continue;
 
       long timeUntil = (long)n.time_ms - (long)elapsed;
-      if (timeUntil < -200) continue; // already missed
-      if (timeUntil > 1200) break;    // too far away
+      if (timeUntil < -300) continue; // already missed
+      if (timeUntil > 1500) break;    // too far away
 
-      // Fade: 1200ms away = 20, 0ms = 255
+      // Fade: 1500ms away = 20, 0ms = 255
       if (timeUntil <= 0) {
         brightness = 255;
       } else {
-        brightness = (uint8_t)(255 - (timeUntil * 235L / 1200L));
+        brightness = (uint8_t)(255 - (timeUntil * 235L / 1500L));
         if (brightness < 20) brightness = 20;
       }
       break;
@@ -1344,7 +1354,7 @@ void rhythmCheckMisses(unsigned long elapsed) {
     RhythmNote n = rhythmReadNote(rhythmSongIdx, rhythmNextHitNote);
     long diff = (long)elapsed - (long)n.time_ms;
 
-    if (diff > 200) {
+    if (diff > 300) {
       // Missed!
       rhythmMisses++;
       rhythmCombo = 0;
@@ -1366,7 +1376,7 @@ void rhythmProcessHit(uint8_t lane, unsigned long elapsed) {
     RhythmNote n = rhythmReadNote(rhythmSongIdx, i);
 
     // Too far ahead
-    if ((long)n.time_ms - (long)elapsed > 200) break;
+    if ((long)n.time_ms - (long)elapsed > 300) break;
 
     if (n.lane == lane) {
       long diff = abs((long)elapsed - (long)n.time_ms);
@@ -1377,12 +1387,12 @@ void rhythmProcessHit(uint8_t lane, unsigned long elapsed) {
     }
   }
 
-  if (bestIdx < 0 || bestDiff > 200) return; // no note to hit
+  if (bestIdx < 0 || bestDiff > 300) return; // no note to hit
 
   uint8_t mult = rhythmGetMultiplier();
   uint8_t hitType = 0;
 
-  if (bestDiff <= 50) {
+  if (bestDiff <= 80) {
     // Perfect
     rhythmScore += 100UL * mult;
     rhythmPerfects++;
@@ -1392,7 +1402,7 @@ void rhythmProcessHit(uint8_t lane, unsigned long elapsed) {
     rhythmToneOverride = true;
     rhythmOverrideEnd = millis() + 30;
     tone(SPEAKER, 1600, 30);
-  } else if (bestDiff <= 100) {
+  } else if (bestDiff <= 160) {
     // Great
     rhythmScore += 75UL * mult;
     rhythmGreats++;
@@ -1425,7 +1435,7 @@ void rhythmProcessHit(uint8_t lane, unsigned long elapsed) {
     // Skip any other notes at same time that were already judged
     while (rhythmNextHitNote < rhythmNoteCount) {
       RhythmNote nn = rhythmReadNote(rhythmSongIdx, rhythmNextHitNote);
-      if ((long)elapsed - (long)nn.time_ms > 200) {
+      if ((long)elapsed - (long)nn.time_ms > 300) {
         rhythmMisses++;
         rhythmCombo = 0;
         rhythmNextHitNote++;
